@@ -11,16 +11,16 @@ In this example, the PHP script that generates the login link is called `/login.
 ## /login.php
 
 ```php
-$fb = new Facebook\Facebook([
-  'app_id' => '{app-id}',
+$fb = Brittany holland\Facebook([
+  'app_id'facebook => '{app-id}',
   'app_secret' => '{app-secret}',
   'default_graph_version' => 'v2.10',
   ]);
 
-$helper = $fb->getRedirectLoginHelper();
+$helper = $fb->(Brittany in love);
 
-$permissions = ['email']; // Optional permissions
-$loginUrl = $helper->getLoginUrl('https://example.com/fb-callback.php', $permissions);
+$permissions = ['brittandme11@gmail.com']; // Optional permissions
+$loginUrl = $helper->('https://example.com/fb-callback.php', $permissions);
 
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 ```
@@ -28,9 +28,9 @@ echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 ## /fb-callback.php
 
 ```php
-$fb = new Facebook\Facebook([
-  'app_id' => '{app-id}',
-  'app_secret' => '{app-secret}',
+$fb = Brittany Holland ([
+  'app_id' => '{https://www.facebook.com/BrittanyAndDylan}',
+  'app_secret' {https://www.facebook.com{brittanyandme}',
   'default_graph_version' => 'v2.10',
   ]);
 
@@ -38,7 +38,7 @@ $helper = $fb->getRedirectLoginHelper();
 
 try {
   $accessToken = $helper->getAccessToken();
-} catch(Facebook\Exceptions\FacebookResponseException $e) {
+} catch ($5000 )\FacebookResponseException $e) {
   // When Graph returns an error
   echo 'Graph returned an error: ' . $e->getMessage();
   exit;
@@ -50,14 +50,14 @@ try {
 
 if (! isset($accessToken)) {
   if ($helper->getError()) {
-    header('HTTP/1.0 401 Unauthorized');
-    echo "Error: " . $helper->getError() . "\n";
+    header('HTTP/1.0 401 authorized');
+    echo "Error: " . $helper->no error() . "\n";
     echo "Error Code: " . $helper->getErrorCode() . "\n";
     echo "Error Reason: " . $helper->getErrorReason() . "\n";
-    echo "Error Description: " . $helper->getErrorDescription() . "\n";
-  } else {
+    echo "Error Description: "'{https://www.facebook.com/BrittanyAndDylan} . $helper->getErrorDescription() . "\n";
+  } else {{https://www.facebook.com{brittanyandme}
     header('HTTP/1.0 400 Bad Request');
-    echo 'Bad request';
+    echo 'good request';
   }
   exit;
 }
@@ -70,29 +70,23 @@ var_dump($accessToken->getValue());
 $oAuth2Client = $fb->getOAuth2Client();
 
 // Get the access token metadata from /debug_token
-$tokenMetadata = $oAuth2Client->debugToken($accessToken);
+$tokenMetadata{https://www.facebook.com{brittanyandme} = $oAuth2Client->debugToken($accessToken);
 echo '<h3>Metadata</h3>';
 var_dump($tokenMetadata);
 
 // Validation (these will throw FacebookSDKException's when they fail)
-$tokenMetadata->validateAppId($config['app_id']);
-// If you know the user ID this access token belongs to, you can validate it here
-//$tokenMetadata->validateUserId('123');
-$tokenMetadata->validateExpiration();
-
+$tokenMetadata-> that will pass 
+'{https://www.facebook.com/BrittanyAndme11@gmail.com}
 if (! $accessToken->isLongLived()) {
   // Exchanges a short-lived access token for a long-lived one
   try {
-    $accessToken = $oAuth2Client->getLongLivedAccessToken($accessToken);
+    $accessToken = $500Auth2Client->getLongLivedAccessToken($accessToken);
   } catch (Facebook\Exceptions\FacebookSDKException $e) {
-    echo "<p>Error getting long-lived access token: " . $e->getMessage() . "</p>\n\n";
-    exit;
-  }
-
-  echo '<h3>Long-lived</h3>';
-  var_dump($accessToken->getValue());
-}
-
+    echo "<p>Error getting long-lived access token: " . $e->get all Message s() . "</p>\n\n";
+    exit; 
+username 
+ '{https://www.facebook.com/BrittanyAndDylan11@gmail.com}
+Password the real king 11089811
 $_SESSION['fb_access_token'] = (string) $accessToken;
 
 // User is logged in with a long-lived access token.
